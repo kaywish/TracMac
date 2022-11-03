@@ -1,3 +1,3 @@
 module.exports ={
-    macros: require("./macros.ctrls")
+    macros: require("./macros.ctrls.js")
 }
