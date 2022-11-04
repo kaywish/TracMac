@@ -31,9 +31,28 @@ const destroy = (req, res) => {
     });
   };
 
+
+  const update = (req, res) => {
+    db.food.findByIdAndUpdate(
+      req.params.id, 
+      { $set: {
+          
+        name: req.body.name,
+        calories: req.body.calories
+     }
+      }, 
+      { new: true }, 
+      (error, updatedFood) => {
+      if(error) return res.status(400).json({ error: error.message });
+  
+      return res.status(200).json(updatedFood)
+    });
+  };
+
 module.exports={
     index,
     create,
     destroy,
-    
+    update
+
 }

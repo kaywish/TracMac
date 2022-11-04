@@ -9,4 +9,6 @@ router.post("/", ctrls.macros.create)
 
 router.delete('/:id', ctrls.macros.destroy)
 
+router.put('/:id', ctrls.macros.update)
+
 module.exports = router

@@ -4,17 +4,21 @@ const port= 3001
 
 const routes = require('./routes')
 
+// env 
+require('dotenv').config()
+
+
+/* == Middleware == */
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Routes 
 app.use("/", routes.macros)
 
 // mongo atlas
 require("./config/db.connection")
 
-// env 
-require('dotenv').config()
 
-/* == Middleware == */
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 
 app.listen(port,3001, ()=> {
