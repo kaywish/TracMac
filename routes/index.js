@@ -1,3 +1,4 @@
 module.exports = {
-    macros: require("./macros.routes")
+    macros: require("./macros.routes"),
+    users: require("./users.routes")
 }
