@@ -1,5 +1,5 @@
 module.exports={
-    Food:require("./Food"),
-    User:require("./Users")
+    food:require("./Food"),
+    user:require("./Users")
  }
  

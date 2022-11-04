@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const foodSchema= new mongoose.Schema({
+const foodSchema = new mongoose.Schema({
    name: String,
    calories: Number,
    protein: Number,
@@ -9,6 +9,6 @@ const foodSchema= new mongoose.Schema({
 
 })
 
-const Food = mongoose.model("Food", foodSchema)
+const food = mongoose.model("food", foodSchema)
 
-module.exports = Food;
+module.exports = food;
