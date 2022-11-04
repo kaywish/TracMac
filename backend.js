@@ -7,6 +7,8 @@ const routes = require('./routes')
 // env 
 require('dotenv').config()
 
+/* == Bcrypt == */
+const bcrypt = require('bcrypt')
 
 /* == Middleware == */
 app.use(express.json());
