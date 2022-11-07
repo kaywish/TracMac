@@ -9,12 +9,18 @@ const register = (req, res) => {
   db.user.findOne({username: req.body.username}, (err, userExists) => {
     if(userExists) {
       res.send('that username is taken')
+      // console.log(req.body)
     } else {
-      db.User.create(req.body, (error, createdUser) => {
+      db.user.create(req.body, (error, createdUser) => {
         res.status(201).json(createdUser)
+        // console.log(createdUser)
+       
+        
       })
     }
   })
+
+  
 }
 
 

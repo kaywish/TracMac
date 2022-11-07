@@ -4,6 +4,9 @@ const port= 3001
 
 const routes = require('./routes')
 
+/* == method override == */
+const methodOverride  = require('method-override')
+
 // env 
 require('dotenv').config()
 
@@ -16,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes 
 app.use("/", routes.macros)
+app.use("/", routes.users)
 
 // mongo atlas
 require("./config/db.connection")
