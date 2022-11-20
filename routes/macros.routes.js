@@ -3,7 +3,7 @@ const router = express.Router();
 
 const ctrls = require('../controllers')
 
-router.get('/food', ctrls.macros.index)
+router.get("/food", ctrls.macros.index)
 
 router.post("/food", ctrls.macros.create)
 

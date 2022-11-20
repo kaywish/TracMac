@@ -11,7 +11,7 @@ const index = (req, res) => {
       
     // });
    res.send("Hello world")
-   console.log("Hello")
+  
 
   };
 
