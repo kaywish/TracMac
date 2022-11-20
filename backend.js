@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express()
-const port= 3001 
 
 const routes = require('./routes')
+
 
 /* == method override == */
 const methodOverride  = require('method-override')
@@ -18,16 +18,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes 
-app.use("/", routes.macros)
-app.use("/", routes.users)
+app.use("/food", routes.macros)
+app.use("/food", routes.users)
 
 // mongo atlas
 require("./config/db.connection")
 
+const PORT = process.env.PORT || 3001;
 
 
 
-app.listen(port,3001, ()=> {
-    console.log("connected on port 3001")
-} )
-
+app.listen(process.env.PORT || 3001, () => 
+console.log("**** server is connected ****"))

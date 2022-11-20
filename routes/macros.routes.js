@@ -11,4 +11,4 @@ router.delete('/:id', ctrls.macros.destroy)
 
 router.put('/:id', ctrls.macros.update)
 
-module.exports = router
+module.exports = router;
