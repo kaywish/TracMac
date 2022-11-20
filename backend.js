@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express()
-
+//import cors
+const cors = require('cors')
 const routes = require('./routes')
 
 
@@ -14,8 +15,9 @@ require('dotenv').config()
 const bcrypt = require('bcrypt')
 
 /* == Middleware == */
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors("*"))
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 // Routes 
 app.use("/food", routes.macros)
