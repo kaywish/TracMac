@@ -3,7 +3,6 @@ const db = require("../models")
 const index = (req, res) => {
     db.food.find({}, (error, food) => {
       if(error) return res.status(400).json({ error: error.message });
-  
       return res.status(200).json({
       food,
         
@@ -11,8 +10,6 @@ const index = (req, res) => {
       
     });
    
-  
-
   };
 
 const create =(req,res) => {

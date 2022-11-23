@@ -2,8 +2,8 @@ const express = require("express");
 const app = express()
 /* == method override == */
 const methodOverride  = require('method-override')
-//import cors
-// const cors = require('cors')
+// import cors
+const cors = require('cors')
 
 const PORT= process.env.PORT || 3001
 const routes = require('./routes')
@@ -19,13 +19,13 @@ require('dotenv').config()
 const bcrypt = require('bcrypt')
 
 /* == Middleware == */
-// app.use(cors("*"))
+app.use(cors("*"))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 // Routes 
 app.use("/food", routes.macros)
-app.use("/", routes.users)
+app.use("/users", routes.users)
 
 // mongo atlas
 require("./config/db.connection")
