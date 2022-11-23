@@ -3,9 +3,9 @@ const router = express.Router();
 
 const ctrls = require('../controllers')
 
-router.get("/food", ctrls.macros.index)
+router.get("/", ctrls.macros.index)
 
-router.post("/food", ctrls.macros.create)
+router.post("/", ctrls.macros.create)
 
 router.delete('/:id', ctrls.macros.destroy)
 

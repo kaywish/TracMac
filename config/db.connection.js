@@ -11,7 +11,7 @@ mongoose.connect(MONGODB_URI="mongodb+srv://admin:j0eB47cPnIi2U7o3@kaywish.88ezy
 console.log(MONGODB_URI)
 
 // set up listeners to monitor your database connection
-mongoose.connection.on('connected', ()=> console.log('DB connected... 🙌🙌🙌'));
+mongoose.connection.on('connected', ()=> console.log('Mongo DB connected... 🙌🙌🙌'));
 
 mongoose.connection.on('error', (err)=> console.log(err.message));
 
